@@ -1,0 +1,51 @@
+/*||--------------------------------------------------------||**
+**||				  <- Site Variables ->					||**
+**||--------------------------------------------------------||*/
+
+
+
+/*||--------------------------------------------------------||**
+**||				 	 <- Mixins ->						||**
+**||--------------------------------------------------------||*/
+
+@mixin trans($style, $dur, $ease: linear, $delay: 0s) {
+	-webkit-transition: $style $dur $ease $delay;
+	-moz-transition: $style $dur $ease $delay;
+	-ms-transition: $style $dur $ease $delay;
+	-o-transition: $style $dur $ease $delay;
+	transition: $style $dur $ease $delay;
+}
+
+@mixin transform($string) {
+	-webkit-transform: $string;
+	-moz-transform: $string;
+	-ms-transform: $string;
+	-o-transform: $string;
+	transform: $string;
+}
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }  
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }  
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};      
+}
